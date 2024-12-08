@@ -80,12 +80,15 @@ Configuración de MySQL
 
 Ejecuta este comando en tu herramienta de MySQL:
 
+```bash
 CREATE DATABASE DataWarehouseVentas;
+```
 
 2. Crear Tablas
 
 Ejecuta los scripts de creación de tablas en MySQL:
 
+```bash
 -- Tabla DimCliente
 CREATE TABLE DimCliente (
 CODCLI INT PRIMARY KEY,
@@ -94,14 +97,18 @@ Pais VARCHAR(50),
 Departamento VARCHAR(50),
 Zona VARCHAR(50)
 );
+```
 
+```bash
 -- Tabla DimProducto
 CREATE TABLE DimProducto (
 CODART INT PRIMARY KEY,
 Articulo VARCHAR(100),
 Serie VARCHAR(50)
 );
+```
 
+```bash
 -- Tabla DimTiempo
 CREATE TABLE DimTiempo (
 Fecha DATE PRIMARY KEY,
@@ -109,7 +116,9 @@ Año INT,
 Mes INT,
 Día INT
 );
+```
 
+```bash
 -- Tabla FactVentas
 CREATE TABLE FactVentas (
 Nfactura INT PRIMARY KEY,
@@ -120,6 +129,7 @@ Unidades INT,
 Precio DECIMAL(10, 2),
 Costo DECIMAL(10, 2)
 );
+```
 
 3. Cargar los Datos en MySQL
 
